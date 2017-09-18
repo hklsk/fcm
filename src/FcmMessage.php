@@ -348,7 +348,7 @@ class FcmMessage
             'time_to_live'     => $this->timeToLive,
             'dry_run'          => $this->dryRun,
             'data'             => $this->data,
-            'notification'     => $this->notification->toArray(),
+            'notification'     => $this->notification ? $this->notification->toArray() : null,
         ];
     }
 }
